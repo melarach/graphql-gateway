@@ -12,6 +12,7 @@
 		<artifactId>graphql-gateway</artifactId>
 		<groupId>org.formentor</groupId>
 		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../graphql-gateway/pom.xml</relativePath>
 	</parent>
 
 	<artifactId>graphql-server</artifactId>

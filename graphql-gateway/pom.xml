@@ -102,12 +102,12 @@
 		</dependency>
 	</dependencies>
 	<modules>
-		<module>graphql-server</module>
-		<module>graphql-schema</module>
-		<module>rest-books-service</module>
-		<module>rest-countries-service</module>
-        <module>graphql-registry</module>
-        <module>graphql-gateway-server</module>
-		<module>graphql-registry-client</module>
+		<module>../graphql-server</module>
+		<module>../graphql-schema</module>
+		<module>../rest-books-service</module>
+		<module>../rest-countries-service</module>
+        <module>../graphql-registry</module>
+        <module>../graphql-gateway-server</module>
+		<module>../graphql-registry-client</module>
 	</modules>
 </project>
