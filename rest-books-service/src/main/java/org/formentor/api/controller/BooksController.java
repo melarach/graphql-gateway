@@ -10,7 +10,10 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Collections;
@@ -70,5 +73,20 @@ public class BooksController {
     @GetMapping("/library/{id}")
     public ResponseEntity<List<BookDto>> booksByLibraryId(@PathVariable("id") String id) {
         return new ResponseEntity<>(Collections.emptyList(), HttpStatus.OK);
+    }
+ 
+    @ApiOperation(
+            tags = "API Books",
+            value = "bookss")
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "OK"),
+            @ApiResponse(code = 500, message = "Internal Server Error")
+    })
+    @GetMapping("/library/test/{test}")
+    public ResponseEntity<BookDto> bookss(@PathVariable("test") String test) {
+    	BookDto bookNew=BookDto.builder().id("1")
+		.name("new").build();
+    	booksService.listBooks().add(bookNew);   	
+        return new ResponseEntity<>(bookNew, HttpStatus.OK);
     }
 }

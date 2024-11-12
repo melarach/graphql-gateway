@@ -34,9 +34,6 @@
             <artifactId>jackson-databind</artifactId>
         </dependency>
         <!-- graphql-gateway/graphql-registry -->
-        <dependency>
-            <groupId>org.formentor</groupId>
-            <artifactId>graphql-registry</artifactId>
-        </dependency>
+ 
     </dependencies>
 </project>
